@@ -1,0 +1,724 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Commas for Dina's Photographers</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: Commas one-sheeter language (white, Commas blue, navy bands, soft blue panels) as a single-column microsite; viewfinder corners as the one photographer flourish. */
+:root{
+  --bg:#ffffff; --surface:#ffffff; --panel:#eef3fe; --panel-2:#f6f8fc;
+  --ink:#0f172a; --muted:#5a6479; --line:#e2e8f2;
+  --blue:#3a6ee8; --blue-ink:#2453c9; --blue-soft:#dbe6fd;
+  --band:#0e1424; --band-ink:#eef2fa; --band-muted:#9aa6bf; --band-line:#253150; --band-card:#161f36;
+  --good:#16a34a; --warn:#d97706;
+  --display:"Plus Jakarta Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --body:"Plus Jakarta Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"DM Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --r:16px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0a0f1c; --surface:#111a2e; --panel:#131f3a; --panel-2:#0f172a;
+  --ink:#edf1f9; --muted:#9aa6bf; --line:#22304f;
+  --blue:#6e97f6; --blue-ink:#8fb0ff; --blue-soft:#1c2c55;
+  --band:#060a14; --band-ink:#eef2fa; --band-muted:#9aa6bf; --band-line:#1f2a45; --band-card:#0f1729;
+  --good:#4ade80; --warn:#fbbf24; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0a0f1c; --surface:#111a2e; --panel:#131f3a; --panel-2:#0f172a;
+  --ink:#edf1f9; --muted:#9aa6bf; --line:#22304f;
+  --blue:#6e97f6; --blue-ink:#8fb0ff; --blue-soft:#1c2c55;
+  --band:#060a14; --band-ink:#eef2fa; --band-muted:#9aa6bf; --band-line:#1f2a45; --band-card:#0f1729;
+  --good:#4ade80; --warn:#fbbf24; color-scheme:dark}
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);line-height:1.12;letter-spacing:-.025em;margin:0;text-wrap:balance}
+h1{font-size:clamp(2.2rem,5.2vw,3.7rem);font-weight:800}
+h2{font-size:clamp(1.7rem,3.4vw,2.5rem);font-weight:800}
+h3{font-size:1.1rem;font-weight:700;letter-spacing:-.01em}
+p{margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+section{padding-block:clamp(56px,8vw,96px)}
+.eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
+.lede{color:var(--muted);font-size:1.12rem;max-width:62ch}
+.hl{color:var(--blue)}
+.num{font-variant-numeric:tabular-nums}
+.hero-grid>*,.orch>*,.bnpl>*,.hl-grid>*,.cta>*,.calc>*,.ref-grid>*,.tour-grid>*{min-width:0}
+.sec-head{display:grid;gap:14px;margin-bottom:40px;max-width:760px}
+
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 20px;border-radius:12px;font-weight:700;font-size:.97rem;text-decoration:none;border:1px solid transparent;cursor:pointer;font-family:var(--body);transition:transform .15s ease,background .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.btn-primary{background:var(--blue);color:#fff}
+.btn-primary:hover{background:var(--blue-ink)}
+.btn-ghost{background:transparent;border-color:var(--line);color:var(--ink)}
+.btn-white{background:#fff;color:#0e1424}
+.btn-outline-w{border-color:rgba(255,255,255,.35);color:#fff;background:transparent}
+.btn svg{width:18px;height:18px;flex:none}
+
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand-word{font-weight:800;letter-spacing:.2em;font-size:.95rem}
+.pill{display:inline-flex;align-items:center;gap:6px;padding:5px 11px;border-radius:999px;background:var(--panel);color:var(--blue-ink);font-size:.8rem;font-weight:700;white-space:nowrap}
+nav.links{display:flex;gap:22px;font-size:.9rem;font-weight:600;color:var(--muted)}
+nav.links a{text-decoration:none}
+nav.links a:hover{color:var(--ink)}
+@media (max-width:980px){nav.links{display:none}}
+@media (max-width:640px){.top .pill{display:none}.top .btn{padding:10px 14px;font-size:.9rem}}
+
+.hero{padding-block:clamp(48px,7vw,80px) clamp(40px,6vw,64px)}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.hero-copy{display:grid;gap:22px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px 20px;color:var(--muted);font-size:.9rem}
+.hero-meta span{display:inline-flex;align-items:center;gap:7px}
+.hero-meta svg{width:16px;height:16px;color:var(--good)}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr;gap:40px}}
+
+.vf{position:relative;padding:14px}
+.vf::before,.vf::after,.vf>.c1,.vf>.c2{content:"";position:absolute;width:26px;height:26px;border-color:var(--blue);border-style:solid;border-width:0}
+.vf::before{top:0;left:0;border-top-width:2px;border-left-width:2px;border-top-left-radius:6px}
+.vf::after{top:0;right:0;border-top-width:2px;border-right-width:2px;border-top-right-radius:6px}
+.vf>.c1{bottom:0;left:0;border-bottom-width:2px;border-left-width:2px;border-bottom-left-radius:6px}
+.vf>.c2{bottom:0;right:0;border-bottom-width:2px;border-right-width:2px;border-bottom-right-radius:6px}
+.receipt{background:var(--band);color:var(--band-ink);border-radius:var(--r);padding:26px;display:grid;gap:16px;box-shadow:0 30px 60px -30px rgba(14,20,36,.55)}
+.rc-top{display:flex;justify-content:space-between;gap:12px;font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--band-muted)}
+.rc-title{font-size:1.15rem;font-weight:700}
+.rc-row{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-top:1px dashed var(--band-line);font-size:.95rem}
+.rc-row b{font-variant-numeric:tabular-nums;font-weight:700;text-align:right}
+.rc-row .dim{color:var(--band-muted)}
+.rc-total{display:flex;justify-content:space-between;align-items:end;gap:14px;background:var(--band-card);border:1px solid var(--band-line);border-radius:12px;padding:16px}
+.rc-total .big{font-size:2rem;font-weight:800;letter-spacing:-.02em;color:#8fb0ff;font-variant-numeric:tabular-nums}
+.rc-note{font-size:.78rem;color:var(--band-muted)}
+.chip{display:inline-block;font-size:.72rem;font-weight:700;padding:3px 8px;border-radius:999px;background:rgba(110,151,246,.18);color:#a9c1ff}
+
+/* zero fee strip */
+.strip{border-block:1px solid var(--line);background:var(--panel-2)}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0;padding-block:22px}
+.strip div{display:grid;gap:2px;padding:4px 20px;border-left:1px solid var(--line)}
+.strip div:first-child{border-left:0;padding-left:0}
+.strip b{font-size:1.5rem;font-weight:800;letter-spacing:-.02em;color:var(--blue-ink)}
+.strip span{font-size:.86rem;color:var(--muted)}
+@media (max-width:760px){.strip .wrap{grid-template-columns:1fr 1fr;row-gap:16px}.strip div:nth-child(3){border-left:0;padding-left:0}}
+
+.ic{width:38px;height:38px;border-radius:10px;background:var(--panel);color:var(--blue);display:grid;place-items:center;flex:none}
+.ic svg{width:20px;height:20px}
+
+/* highlevel */
+.hl-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.hl-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 12px 6px 6px;border-radius:999px;border:1px solid var(--line);background:var(--surface);font-size:.85rem;font-weight:700;width:max-content;max-width:100%}
+.hl-badge i{width:22px;height:22px;border-radius:999px;background:var(--blue);display:grid;place-items:center;color:#fff;font-style:normal;font-size:.75rem}
+.hsteps{list-style:none;padding:0;margin:28px 0 0;display:grid;gap:0;counter-reset:h}
+.hsteps li{display:grid;grid-template-columns:auto 1fr;gap:16px;padding:18px 0;border-top:1px solid var(--line)}
+.hsteps li:last-child{border-bottom:1px solid var(--line)}
+.hsteps .n{width:30px;height:30px;border-radius:999px;border:2px solid var(--blue);color:var(--blue-ink);display:grid;place-items:center;font-weight:800;font-size:.9rem}
+.hsteps p{color:var(--muted);font-size:.95rem;margin-top:3px}
+.hsteps code{font-family:var(--mono);font-size:.84rem;background:var(--panel);color:var(--blue-ink);padding:1px 6px;border-radius:5px}
+.sync{background:var(--band);color:var(--band-ink);border-radius:20px;padding:26px;display:grid;gap:18px}
+.sync-head{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.sync-head span{font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--band-muted)}
+.lanes{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:stretch}
+.lane{border:1px solid var(--band-line);background:var(--band-card);border-radius:14px;padding:16px;display:grid;gap:8px;align-content:start}
+.lane h3{font-size:1rem}
+.lane ul{margin:0;padding:0;list-style:none;display:grid;gap:6px;font-size:.86rem;color:var(--band-muted)}
+.lane li::before{content:"· ";color:#8fb0ff}
+.lane.c{border-color:#3a6ee8;background:#16244a}
+.arrows{display:grid;place-items:center;color:#8fb0ff}
+.arrows svg{width:26px;height:26px}
+.sync-foot{font-size:.86rem;color:var(--band-muted);border-top:1px dashed var(--band-line);padding-top:14px}
+.sync-foot b{color:var(--band-ink)}
+@media (max-width:900px){.hl-grid{grid-template-columns:1fr;gap:32px}}
+@media (max-width:560px){.lanes{grid-template-columns:1fr}.arrows svg{transform:rotate(90deg)}}
+
+/* problem cards */
+.cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:24px;display:grid;gap:10px;align-content:start}
+.card p{color:var(--muted);font-size:.96rem}
+@media (max-width:860px){.cards3{grid-template-columns:1fr}}
+
+/* calculators */
+.calc{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--surface)}
+.calc-in{padding:30px;display:grid;gap:26px;align-content:start}
+.calc-out{padding:30px;background:var(--panel);display:grid;gap:18px;align-content:start}
+.field{display:grid;gap:10px}
+.field-top{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.field label{font-weight:700;font-size:.95rem}
+.field output{font-family:var(--mono);font-weight:500;font-size:1.05rem;color:var(--blue-ink);font-variant-numeric:tabular-nums}
+.field small{color:var(--muted);font-size:.84rem}
+input[type=range]{width:100%;accent-color:var(--blue);height:24px}
+.save-big{font-size:clamp(2.4rem,5vw,3.4rem);font-weight:800;letter-spacing:-.03em;line-height:1;color:var(--blue-ink);font-variant-numeric:tabular-nums}
+.bars{display:grid;gap:12px}
+.bar-row{display:grid;grid-template-columns:110px 1fr auto;gap:12px;align-items:center;font-size:.9rem}
+.bar-track{height:12px;border-radius:999px;background:var(--surface);overflow:hidden;border:1px solid var(--line)}
+.bar-fill{height:100%;border-radius:999px;transition:width .35s ease}
+.bar-row b{font-variant-numeric:tabular-nums;font-family:var(--mono);font-weight:500}
+.how{border-top:1px solid var(--line);padding-top:16px;font-size:.88rem;color:var(--muted)}
+.how strong{color:var(--ink)}
+@media (max-width:860px){.calc{grid-template-columns:1fr}}
+
+/* compare */
+.tbl-wrap{overflow-x:auto;border-radius:18px}
+table.cmp{width:100%;min-width:640px;border-collapse:separate;border-spacing:0;font-size:.95rem}
+.cmp th,.cmp td{padding:17px 20px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+.cmp thead th{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.cmp thead th.us{background:var(--blue);color:#fff;border-radius:14px 14px 0 0;border-bottom-color:var(--blue)}
+.cmp td.us{background:var(--panel);font-weight:600}
+.cmp tbody tr:last-child td.us{border-radius:0 0 14px 14px}
+.cmp td:first-child{font-weight:700;width:22%}
+.cmp td.them{color:var(--muted);width:36%}
+.mark{display:inline-flex;gap:10px}
+.mark svg{width:18px;height:18px;flex:none;margin-top:3px;color:var(--blue)}
+
+/* orchestration */
+.band{background:var(--band);color:var(--band-ink)}
+.band .lede{color:var(--band-muted)}
+.band .eyebrow{color:#8fb0ff}
+.orch{display:grid;grid-template-columns:1fr 1.15fr;gap:48px;align-items:center}
+.orch-points{display:grid;gap:18px;margin-top:28px}
+.op{display:grid;grid-template-columns:auto 1fr;gap:14px}
+.op .ic{background:var(--band-card);color:#8fb0ff;border:1px solid var(--band-line)}
+.op p{color:var(--band-muted);font-size:.95rem}
+.op h3{color:var(--band-ink);margin-bottom:2px}
+.diagram{background:var(--band-card);border:1px solid var(--band-line);border-radius:20px;padding:22px;overflow-x:auto}
+.diagram svg{display:block;width:100%;min-width:480px;height:auto}
+.stat-strip{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+.stat{flex:1 1 150px;border:1px solid var(--band-line);border-radius:14px;padding:16px;background:var(--band-card)}
+.stat b{display:block;font-size:1.6rem;font-weight:800;letter-spacing:-.02em;color:#a9c1ff}
+.stat span{font-size:.84rem;color:var(--band-muted)}
+@media (max-width:900px){.orch{grid-template-columns:1fr}}
+
+/* bnpl simple */
+.bnpl{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.bn-list{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:14px}
+.bn-list li{display:flex;gap:12px}
+.bn-list svg{width:22px;height:22px;flex:none;color:var(--blue);margin-top:1px}
+.bn-list b{display:block}
+.bn-list span{color:var(--muted);font-size:.95rem}
+.providers{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.providers span{font-size:.82rem;font-weight:700;padding:6px 11px;border-radius:9px;border:1px solid var(--line);background:var(--surface)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.split .card{gap:6px}
+.split .k{font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.split .v{font-size:1.7rem;font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.split .card.on{border-color:var(--blue);background:var(--panel)}
+.split .card.on .v{color:var(--blue-ink)}
+.small-note{font-size:.82rem;color:var(--muted);margin-top:12px}
+@media (max-width:900px){.bnpl{grid-template-columns:1fr}}
+
+/* platform tour */
+.tour-top{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:20px;margin-bottom:28px}
+.tabs{display:inline-flex;gap:4px;padding:4px;border-radius:12px;background:var(--panel);flex-wrap:wrap}
+.tabs button{font:700 .9rem var(--body);padding:9px 16px;border-radius:9px;border:0;background:transparent;color:var(--muted);cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 3px rgba(15,23,42,.12)}
+.tour-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:36px;align-items:start}
+.tour-copy{display:grid;gap:14px;align-content:start}
+.tour-copy p{color:var(--muted)}
+.tour-copy ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.tour-copy li{display:flex;gap:10px;font-size:.95rem}
+.tour-copy li svg{width:18px;height:18px;flex:none;margin-top:3px;color:var(--blue)}
+.browser{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 30px 60px -32px rgba(14,20,36,.45)}
+.browser-bar{display:flex;align-items:center;gap:8px;padding:10px 14px;background:var(--panel-2);border-bottom:1px solid var(--line)}
+.browser-bar i{width:10px;height:10px;border-radius:999px;background:var(--line)}
+.browser-bar span{margin-left:10px;font:500 .78rem var(--mono);color:var(--muted);background:var(--surface);border:1px solid var(--line);padding:3px 10px;border-radius:7px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.shot{overflow-x:auto;background:#fff}
+.shot img{display:block;width:100%;height:auto}
+.shot.wide img{min-width:780px}
+@media (max-width:900px){.tour-grid{grid-template-columns:1fr}}
+
+/* referrals */
+.ref{background:var(--panel)}
+.ref-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.pct{font-size:clamp(4rem,10vw,6.5rem);font-weight:800;letter-spacing:-.05em;line-height:.9;color:var(--blue)}
+.ref-calc{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:28px;display:grid;gap:22px}
+.ref-out{border-top:1px solid var(--line);padding-top:18px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:12px}
+.ref-out .save-big{font-size:clamp(2.2rem,4.4vw,3rem)}
+.ref-shot{margin-top:28px}
+@media (max-width:900px){.ref-grid{grid-template-columns:1fr}}
+
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.step{border:1px solid var(--line);border-radius:var(--r);padding:24px;background:var(--surface);display:grid;gap:10px;align-content:start}
+.step .n{width:34px;height:34px;border-radius:999px;background:var(--blue);color:#fff;display:grid;place-items:center;font-weight:800}
+.step p{color:var(--muted);font-size:.95rem}
+@media (max-width:860px){.steps{grid-template-columns:1fr}}
+
+.faq{display:grid;gap:10px;max-width:820px}
+details{border:1px solid var(--line);border-radius:14px;background:var(--surface);padding:0 20px}
+summary{cursor:pointer;list-style:none;padding:18px 0;font-weight:700;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--blue);font-weight:800;font-size:1.2rem;line-height:1}
+details[open] summary::after{content:"–"}
+details p{color:var(--muted);padding-bottom:18px;font-size:.96rem}
+
+.cta{background:var(--blue);color:#fff;border-radius:24px;padding:clamp(28px,5vw,52px);display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:center}
+.cta h2{color:#fff}
+.cta p{color:rgba(255,255,255,.86)}
+.contact{display:grid;gap:10px}
+.crow{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px;border-radius:12px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2)}
+.crow span{display:flex;align-items:center;gap:10px;font-weight:600;min-width:0;overflow-wrap:anywhere}
+.crow svg{width:18px;height:18px;flex:none}
+.copy{font:700 .78rem var(--body);padding:6px 10px;border-radius:8px;border:0;background:#fff;color:#0e1424;cursor:pointer;flex:none}
+.cta-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+@media (max-width:860px){.cta{grid-template-columns:1fr}}
+
+footer{padding-block:32px 48px;color:var(--muted);font-size:.82rem}
+footer .wrap{display:grid;gap:10px}
+footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}.btn:hover{transform:none}}
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Commas">
+      <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#3a6ee8"/><path d="M14.2 9.5c2.6 0 4.6 2 4.6 4.8 0 3.9-2.6 7.2-6.3 8.4l-.7-1.6c2-.9 3.3-2.3 3.6-4.1-2-.2-3.6-1.7-3.6-3.6 0-2.2 1.3-3.9 2.4-3.9z" fill="#fff"/></svg>
+      <span class="brand-word">COMMAS</span>
+    </a>
+    <nav class="links" aria-label="Sections">
+      <a href="#highlevel">HighLevel</a><a href="#calculator">Fees</a><a href="#financing">Financing</a><a href="#platform">Platform</a><a href="#refer">Refer &amp; earn</a>
+    </nav>
+    <span class="pill">For Dina's photographers</span>
+    <a class="btn btn-primary" href="https://calendly.com/luis-commas/commas-discovery-call-45" target="_blank" rel="noopener">Book a call</a>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">Dina sent you here</span>
+        <h1>Keep HighLevel. <span class="hl">Swap Stripe for something better.</span></h1>
+        <p class="lede">Commas plugs into the HighLevel setup you already run. Your funnels, calendars and invoices stay exactly where they are. Underneath, you get lower card fees, more big charges approved, financing for bigger packages, and a home for your community. No monthly fee.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="https://calendly.com/luis-commas/commas-discovery-call-45" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg>
+            15 minutes with Luis
+          </a>
+          <a class="btn btn-ghost" href="https://commasdemo.com/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg>
+            Try the live demo
+          </a>
+        </div>
+        <div class="hero-meta">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg>$0 monthly fee</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg>Connects to HighLevel</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg>Free migration off Stripe</span>
+        </div>
+      </div>
+
+      <div class="vf" aria-label="Example HighLevel invoice paid through Commas">
+        <i class="c1"></i><i class="c2"></i>
+        <div class="receipt">
+          <div class="rc-top"><span>HighLevel invoice · example</span><span>Paid via Commas</span></div>
+          <div class="rc-title">Full-day wedding collection</div>
+          <div>
+            <div class="rc-row"><span>Sent from</span><b>Your HighLevel account</b></div>
+            <div class="rc-row"><span>Package price</span><b>$12,000</b></div>
+            <div class="rc-row"><span>Client chose</span><b>Pay monthly</b></div>
+            <div class="rc-row"><span class="dim">Status in HighLevel</span><b style="color:#4ade80">Paid · workflow triggered</b></div>
+          </div>
+          <div class="rc-total">
+            <div><div class="rc-note">Paid to you up front</div><div class="big">$10,440</div></div>
+            <span class="chip">No chasing the balance</span>
+          </div>
+          <p class="rc-note">Illustration using a 13% no-recourse financing program. Approval and your written quote set the final numbers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip">
+    <div class="wrap">
+      <div><b>$0</b><span>monthly fee, setup fee or contract</span></div>
+      <div><b>Flat</b><span>card rate, quoted up front</span></div>
+      <div><b>~10</b><span>processors behind every charge</span></div>
+      <div><b>20%</b><span>of our net margin when you refer a friend</span></div>
+    </div>
+  </div>
+
+  <!-- HIGHLEVEL -->
+  <section id="highlevel">
+    <div class="wrap hl-grid">
+      <div>
+        <span class="hl-badge"><i>✓</i>Works with HighLevel and Dina's white-label setup</span>
+        <h2 style="margin-top:18px">How the HighLevel integration works</h2>
+        <p class="lede" style="margin-top:14px">You don't leave HighLevel and you don't rebuild anything. Commas connects to your HighLevel account with an API key, and from then on payments, buyers and financing approvals flow both ways.</p>
+        <ol class="hsteps">
+          <li><span class="n">1</span><div><h3>Grab your HighLevel access token</h3><p>In HighLevel, create a private integration under <code>Settings → Private Integrations</code> and copy the token. Takes two minutes, and your account manager can do it with you on a screen share.</p></div></li>
+          <li><span class="n">2</span><div><h3>Paste it into Commas</h3><p>In Commas, go to <code>Settings → Integrations → CRM</code> and connect HighLevel. Your Commas account is now linked to your sub-account.</p></div></li>
+          <li><span class="n">3</span><div><h3>Keep selling the way you do now</h3><p>Send the same invoices, funnels and booking links. Commas handles the checkout, and each payment lands back on the contact in HighLevel so your pipeline and automations keep firing.</p></div></li>
+        </ol>
+        <p class="small-note">Commas isn't listed in HighLevel's app marketplace search. It connects through the private integration above. Commas also has an open API and an MCP server if you want to go further.</p>
+      </div>
+
+      <div class="sync" aria-label="What syncs between HighLevel and Commas">
+        <div class="sync-head"><h3>What stays in sync</h3><span>Two-way</span></div>
+        <div class="lanes">
+          <div class="lane">
+            <h3>HighLevel</h3>
+            <ul><li>Contacts and pipeline</li><li>Funnels and booking pages</li><li>Invoices and estimates</li><li>Workflows and reminders</li></ul>
+          </div>
+          <div class="arrows" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h15l-4-4M20 16H5l4 4"/></svg></div>
+          <div class="lane c">
+            <h3>Commas</h3>
+            <ul><li>Card checkout at a flat rate</li><li>Financing from 10 providers</li><li>Payouts to your bank</li><li>Community and courses</li></ul>
+          </div>
+        </div>
+        <div class="sync-foot"><b>Example:</b> a couple pays your $12,000 invoice with monthly financing. HighLevel marks the opportunity won, tags the contact "Booked" and kicks off your welcome-guide email, same as if they'd paid by card.</div>
+        <div class="sync-foot"><b>Also connects to</b> Zapier, Meta pixels, HubSpot, Salesforce and Close. Your Commas account manager handles the technical setup.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Sound familiar?</span>
+        <h2>Three ways your payment setup is costing you right now</h2>
+      </div>
+      <div class="cards3">
+        <div class="card">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M19 5L5 19"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/></svg></div>
+          <h3>"2.9%" is never 2.9%</h3>
+          <p>Stripe adds 30¢ per charge, 1.5% for international cards and 1% for currency conversion. Most creatives we look at are really paying 3.2% to 3.5%.</p>
+        </div>
+        <div class="card">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10 18h4"/></svg></div>
+          <h3>Big charges get flagged</h3>
+          <p>A $4,000 retainer sets off "Did you mean to make this purchase?" from the client's bank. Some never see the text, and you're following up instead of shooting.</p>
+        </div>
+        <div class="card">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 8v4l2.5 2.5"/><circle cx="12" cy="12" r="9"/></svg></div>
+          <h3>You're the bank</h3>
+          <p>A 20% deposit now and the balance on delivery means you carry the risk and chase the money, and clients pick the smaller package.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALCULATOR -->
+  <section id="calculator" style="background:var(--panel-2)">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Beat your Stripe fees</span>
+        <h2>One flat rate. No monthly fee. See what it's worth.</h2>
+        <p class="lede">Commas only earns when you get paid. There's no subscription, no setup fee and no add-ons. Move the sliders to match your business.</p>
+      </div>
+      <div class="calc">
+        <div class="calc-in">
+          <div class="field">
+            <div class="field-top"><label for="vol">Card sales per month</label><output id="volOut" class="num">$15,000</output></div>
+            <input type="range" id="vol" min="2000" max="100000" step="1000" value="15000">
+            <small>Most of Dina's photographers land between $10K and $20K.</small>
+          </div>
+          <div class="field">
+            <div class="field-top"><label for="cur">Your real rate today</label><output id="curOut" class="num">3.30%</output></div>
+            <input type="range" id="cur" min="2.9" max="4.2" step="0.05" value="3.3">
+            <small>Stripe's blended rate is usually 3.2% to 3.5%.</small>
+          </div>
+          <div class="field">
+            <div class="field-top"><label for="com">Commas flat rate</label><output id="comOut" class="num">2.80%</output></div>
+            <input type="range" id="com" min="2.5" max="2.9" step="0.05" value="2.8">
+            <small>Example rate. Luis quotes yours on the call.</small>
+          </div>
+        </div>
+        <div class="calc-out" aria-live="polite">
+          <span class="eyebrow">You'd keep about</span>
+          <div><span class="save-big" id="saveYr">$900</span> <span style="color:var(--muted);font-weight:600">a year</span></div>
+          <p style="color:var(--muted)"><b id="saveMo" class="num" style="color:var(--ink)">$75</b> a month back in your pocket, with $0 in monthly fees on top.</p>
+          <div class="bars">
+            <div class="bar-row"><span>Stripe today</span><div class="bar-track"><div class="bar-fill" style="background:var(--muted);width:100%"></div></div><b id="feeS">$495</b></div>
+            <div class="bar-row"><span>Commas</span><div class="bar-track"><div class="bar-fill" id="barC" style="background:var(--blue);width:85%"></div></div><b id="feeC">$420</b></div>
+          </div>
+          <div class="how"><strong>Find your real rate in 2 minutes:</strong> in Stripe, open Transactions, filter by Succeeded, export the last 30 days, then divide total fees by total volume. Or send the export to Luis and he'll do it.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARE -->
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Why it's better</span>
+        <h2>Stripe vs. Commas, side by side</h2>
+      </div>
+      <div class="tbl-wrap">
+        <table class="cmp">
+          <thead><tr><th></th><th>Stripe</th><th class="us">Commas</th></tr></thead>
+          <tbody>
+            <tr><td>What you really pay</td><td class="them">2.9% + 30¢ advertised, +1.5% international, +1% currency conversion. Usually 3.2% to 3.5% blended.</td><td class="us"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg>One flat rate, quoted up front. $0 monthly fee.</span></td></tr>
+            <tr><td>Works with HighLevel</td><td class="them">Yes, as a payment provider.</td><td class="us"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg>Yes, via private integration. Payments and financing sync to your contacts.</span></td></tr>
+            <tr><td>Approvals on big charges</td><td class="them">One processor. If it declines, the sale stalls.</td><td class="us"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg>Routes each charge across multiple processors for more first-try approvals.</span></td></tr>
+            <tr><td>Client financing</td><td class="them">Klarna, Affirm, Afterpay.</td><td class="us"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg>10 providers in one checkout. Up to $30K, credit from 450.</span></td></tr>
+            <tr><td>Community hosting</td><td class="them">Not included. You pay for Skool, Circle or Discord separately.</td><td class="us"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg>Built in: channels, courses, live Q&amp;A and paid VIP rooms.</span></td></tr>
+            <tr><td>Who picks up</td><td class="them">A help center and a ticket queue.</td><td class="us"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg>Luis onboards you, then a dedicated account manager in Slack.</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORCHESTRATION -->
+  <section class="band">
+    <div class="wrap orch">
+      <div>
+        <span class="eyebrow">Payment orchestration</span>
+        <h2 style="margin-top:14px">Your $4,800 charge gets more than one shot</h2>
+        <p class="lede" style="margin-top:14px">Stripe sends every charge down one road. Commas connects to about ten processors, including Stripe and Adyen, and picks the route most likely to approve each card. If one says no, the charge tries another before your client notices.</p>
+        <div class="orch-points">
+          <div class="op"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg></div><div><h3>Fewer "is this fraud?" texts</h3><p>Large creative bookings are exactly what bank fraud filters flag. Smarter routing means fewer holds and fewer awkward follow-ups.</p></div></div>
+          <div class="op"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></div><div><h3>Better rates for you</h3><p>Commas moves serious volume across these processors, so it gets better pricing than a solo business can get from Stripe directly.</p></div></div>
+        </div>
+      </div>
+      <div>
+        <div class="diagram" role="img" aria-label="Diagram: a client's card charge goes to Commas, which tries processor A, gets a decline, and reroutes to processor B, which approves it.">
+          <svg viewBox="0 0 520 330" fill="none" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, system-ui, sans-serif">
+            <rect x="10" y="125" width="122" height="80" rx="12" fill="#1c2742" stroke="#2b3a60"/>
+            <text x="71" y="155" text-anchor="middle" fill="#9aa6bf" font-size="11" letter-spacing="1">CLIENT CARD</text>
+            <text x="71" y="182" text-anchor="middle" fill="#eef2fa" font-size="18" font-weight="800">$4,800</text>
+            <path d="M132 165 H 186" stroke="#6e97f6" stroke-width="2"/><path d="M186 165 l-8 -5 v10z" fill="#6e97f6"/>
+            <rect x="190" y="115" width="120" height="100" rx="16" fill="#3a6ee8"/>
+            <text x="250" y="160" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="800" letter-spacing="2">COMMAS</text>
+            <text x="250" y="182" text-anchor="middle" fill="#dbe6fd" font-size="11">picks the best route</text>
+            <path d="M310 140 C 345 140, 350 55, 386 55" stroke="#64748b" stroke-width="2" stroke-dasharray="5 5"/>
+            <rect x="388" y="28" width="122" height="54" rx="10" fill="#1c2742" stroke="#2b3a60"/>
+            <text x="402" y="51" fill="#eef2fa" font-size="12.5" font-weight="700">Processor A</text>
+            <text x="402" y="69" fill="#f59e0b" font-size="11">Declined · retry</text>
+            <path d="M310 165 H 386" stroke="#4ade80" stroke-width="2.5"/><path d="M386 165 l-8 -5 v10z" fill="#4ade80"/>
+            <rect x="388" y="138" width="122" height="54" rx="10" fill="#12301f" stroke="#2f7a4c"/>
+            <text x="402" y="161" fill="#eef2fa" font-size="12.5" font-weight="700">Processor B</text>
+            <text x="402" y="179" fill="#4ade80" font-size="11">Approved</text>
+            <path d="M310 190 C 345 190, 350 275, 386 275" stroke="#3a4a70" stroke-width="2" stroke-dasharray="2 6"/>
+            <rect x="388" y="248" width="122" height="54" rx="10" fill="#1c2742" stroke="#2b3a60"/>
+            <text x="402" y="271" fill="#eef2fa" font-size="12.5" font-weight="700">Processors C–J</text>
+            <text x="402" y="289" fill="#9aa6bf" font-size="11">Standing by</text>
+            <text x="10" y="252" fill="#9aa6bf" font-size="11">With Stripe alone:</text>
+            <text x="10" y="270" fill="#9aa6bf" font-size="11">one route, one try.</text>
+          </svg>
+        </div>
+        <div class="stat-strip">
+          <div class="stat"><b>~10</b><span>processors behind every checkout</span></div>
+          <div class="stat"><b>15–20%</b><span>higher first-try approvals we typically see vs. a single processor</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BNPL (simple) -->
+  <section id="financing">
+    <div class="wrap bnpl">
+      <div>
+        <span class="eyebrow">Buy now, pay later</span>
+        <h2 style="margin-top:14px">Sell the bigger package. Get paid in full up front.</h2>
+        <p class="lede" style="margin-top:14px">Your client pays monthly. You get paid now. The financing company collects from them.</p>
+        <ul class="bn-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg><div><b>Bigger bookings</b><span>"$12,000" is a hard yes. "A few hundred a month" is easy.</span></div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg><div><b>No deposits to chase</b><span>The money lands before the shoot, not after delivery.</span></div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg><div><b>Not your risk</b><span>On no-recourse programs, if a client stops paying, that's the provider's problem.</span></div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg><div><b>More clients approved</b><span>10 providers in one checkout, starting at a 450 credit score.</span></div></li>
+        </ul>
+        <div class="providers" aria-label="Financing providers"><span>ClarityPay</span><span>PayVa</span><span>Klarna</span><span>PayPal</span><span>Zip</span><span>Sezzle</span><span>Credit Key</span><span>Climb</span><span>Sunbit</span><span>+1 more</span></div>
+      </div>
+      <div>
+        <div class="split">
+          <div class="card"><span class="k">Deposit + balance</span><span class="v">$2,400</span><p>today, then you chase $9,600 after the wedding</p></div>
+          <div class="card on"><span class="k">With financing</span><span class="v">$10,440</span><p>today, paid in full on a $12,000 package</p></div>
+        </div>
+        <p class="small-note">Financing costs you a fee (roughly 8% to 20% depending on the program), so use it for the big packages and keep regular card payments for smaller sessions. US clients only for now. Luis picks the right program for your clients on the call.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLATFORM TOUR -->
+  <section id="platform" style="background:var(--panel-2)">
+    <div class="wrap">
+      <div class="tour-top">
+        <div class="sec-head" style="margin-bottom:0">
+          <span class="eyebrow">See the platform</span>
+          <h2>Payments, invoices and your community in one login</h2>
+        </div>
+        <a class="btn btn-primary" href="https://commasdemo.com/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg>
+          Click around the live demo
+        </a>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Platform screens" style="margin-bottom:24px">
+        <button role="tab" id="t-community" aria-controls="p-community" aria-selected="true">Community hosting</button>
+        <button role="tab" id="t-invoicing" aria-controls="p-invoicing" aria-selected="false">Invoicing</button>
+        <button role="tab" id="t-referrals" aria-controls="p-referrals" aria-selected="false">Referrals</button>
+      </div>
+
+      <div class="tour-grid" role="tabpanel" id="p-community" aria-labelledby="t-community">
+        <div class="tour-copy">
+          <h3 style="font-size:1.4rem">Host your community where you get paid</h3>
+          <p>Run a paid mentorship, a workshop alumni group or a members' club for your clients, all on Commas. No Skool, Circle or Discord subscription on the side.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg>Channels, feeds, pinned posts and moderators</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg>Course library for your editing or posing lessons</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg>Locked VIP rooms that open when someone pays</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg>Memberships billed through the same checkout</li>
+          </ul>
+        </div>
+        <div class="browser"><div class="browser-bar"><i></i><i></i><i></i><span>commasdemo.com · community</span></div><div class="shot"><img src="assets/community.webp" alt="Commas community: channel sidebar with Welcome, Course library, Live Q&A and a locked VIP lounge, next to a pinned welcome post in the feed" width="1239" height="1128" loading="lazy"></div></div>
+      </div>
+
+      <div class="tour-grid" role="tabpanel" id="p-invoicing" aria-labelledby="t-invoicing" hidden>
+        <div class="tour-copy">
+          <h3 style="font-size:1.4rem">See every booking and what's still owed</h3>
+          <p>Monthly, yearly and one-time invoices in one list, with paid, outstanding and overdue totals at the top. If you'd rather keep invoicing in HighLevel, payments still land here.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg>Payment plans and one-time invoices</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg>Filter by status, due date or buyer</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg>Export for your bookkeeper</li>
+          </ul>
+        </div>
+        <div class="browser"><div class="browser-bar"><i></i><i></i><i></i><span>commasdemo.com · invoicing</span></div><div class="shot wide"><img src="assets/invoicing.webp" alt="Commas invoicing: totals for paid, outstanding and overdue invoices above a list of monthly, yearly and one-time invoices" width="3176" height="806" loading="lazy"></div></div>
+      </div>
+
+      <div class="tour-grid" role="tabpanel" id="p-referrals" aria-labelledby="t-referrals" hidden>
+        <div class="tour-copy">
+          <h3 style="font-size:1.4rem">Watch your referral earnings add up</h3>
+          <p>Every creative you bring in shows up in your dashboard with what they've earned you and what's pending. More on that just below.</p>
+        </div>
+        <div class="browser"><div class="browser-bar"><i></i><i></i><i></i><span>commasdemo.com · referrals</span></div><div class="shot wide"><img src="assets/referrals.webp" alt="Commas referral dashboard: total referrals, commissions earned and pending, plus a table of referred businesses" width="3100" height="495" loading="lazy"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REFER -->
+  <section id="refer" class="ref">
+    <div class="wrap ref-grid">
+      <div style="display:grid;gap:16px">
+        <span class="eyebrow">Refer &amp; earn</span>
+        <div class="pct">20%</div>
+        <h2>Know another photographer? Get paid every month they process.</h2>
+        <p class="lede">Anyone in Dina's community who refers another business to Commas earns 20% of Commas' net margin on that account, every month, for as long as they stay. No cap. Just make the intro to Luis, and he handles the rest.</p>
+        <p style="color:var(--muted);font-size:.95rem">Doesn't have to be a photographer. Videographers, planners, coaches, venues, or anyone selling online counts.</p>
+      </div>
+      <div class="ref-calc">
+        <div class="field">
+          <div class="field-top"><label for="rn">Creatives you introduce</label><output id="rnOut" class="num">5</output></div>
+          <input type="range" id="rn" min="1" max="25" step="1" value="5">
+        </div>
+        <div class="field">
+          <div class="field-top"><label for="rv">Their average monthly sales</label><output id="rvOut" class="num">$15,000</output></div>
+          <input type="range" id="rv" min="5000" max="200000" step="5000" value="15000">
+        </div>
+        <div class="ref-out" aria-live="polite">
+          <div><span class="eyebrow">You'd earn about</span><div><span class="save-big" id="rYr">$5,040</span> <span style="color:var(--muted);font-weight:600">a year</span></div></div>
+          <div style="text-align:right;color:var(--muted)"><b id="rMo" class="num" style="color:var(--ink);font-size:1.2rem">$420</b><br>a month</div>
+        </div>
+        <p class="small-note" style="margin-top:0">Illustrative, based on average account economics. Your actual commission depends on each account's real processed volume and margin.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEPS -->
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Switching is the easy part</span>
+        <h2>Three steps, and two of them are ours</h2>
+      </div>
+      <div class="steps">
+        <div class="step"><span class="n">1</span><h3>15 minutes with Luis</h3><p>Bring your last 30 days of Stripe transactions. Luis shows your real rate next to the Commas rate and which financing fits your clients.</p></div>
+        <div class="step"><span class="n">2</span><h3>We connect HighLevel and migrate you</h3><p>Your account manager links your HighLevel account and moves your products and customers over. Free, no contract.</p></div>
+        <div class="step"><span class="n">3</span><h3>Send your next invoice</h3><p>Same HighLevel invoice or booking link, now with a lower card fee and a "pay over time" option.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head"><span class="eyebrow">Questions photographers ask</span><h2>Before you book the call</h2></div>
+      <div class="faq">
+        <details><summary>Is there really no monthly fee?</summary><p>Yes. Commas costs $0 a month, with no setup fee and no contract. It only earns a flat rate when you process a payment.</p></details>
+        <details><summary>Do I have to leave HighLevel or rebuild my funnels?</summary><p>No. Commas connects to your HighLevel account through a private integration, so your funnels, calendars, invoices and workflows stay where they are. Your account manager sets it up with you.</p></details>
+        <details><summary>Can I host my community on Commas?</summary><p>Yes. Channels, a course library, live Q&amp;A and paid VIP rooms are built in, and memberships bill through the same checkout. You can drop the separate community subscription.</p></details>
+        <details><summary>How does the 20% referral work?</summary><p>Introduce someone to Luis. Once they're processing on Commas, you earn 20% of Commas' net margin on their account every month for as long as they stay. Luis attributes them to you and you can track it in your dashboard.</p></details>
+        <details><summary>I'm outside the US. Does this work for me?</summary><p>Financing is US-only for now. Card processing options vary by country, so text Luis and he'll tell you what's available where you are.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="cta">
+        <div style="display:grid;gap:14px">
+          <h2>Talk to Luis. It's 15 minutes.</h2>
+          <p>Mention Dina when you reach out. Luis personally onboards everyone from her community, looks at your real numbers and tells you whether switching is worth it.</p>
+          <div class="cta-btns">
+            <a class="btn btn-white" href="https://calendly.com/luis-commas/commas-discovery-call-45" target="_blank" rel="noopener">Book a call</a>
+            <a class="btn btn-outline-w" id="signup" href="https://commas.com" target="_blank" rel="noopener">Create a free account</a>
+          </div>
+        </div>
+        <div class="contact">
+          <div class="crow"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>Text (678) 755-5028</span><button class="copy" type="button" data-copy="(678) 755-5028">Copy</button></div>
+          <div class="crow"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>luis@commas.com</span><button class="copy" type="button" data-copy="luis@commas.com">Copy</button></div>
+          <div class="crow"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 110 5 2.5 2.5 0 010-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.5c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21H9z"/></svg><a href="https://www.linkedin.com/in/luisdewendt/" target="_blank" rel="noopener" style="text-decoration:none">in/luisdewendt</a></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="row"><span>Commas, Inc. · Miami, FL · <a href="https://commas.com" target="_blank" rel="noopener">commas.com</a></span><span>Prepared by Luis Dewendt for Dina's photography community</span></div>
+    <p>Savings, payout and referral figures are illustrations. Your actual card rate, financing fees, payouts and commissions depend on your account and are confirmed in writing. Financing is subject to provider and client approval and is currently available to US buyers only. Referral income is not guaranteed. Demo screenshots show sample data.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Swap in Dina's referral link here once it's set up.
+  var REFERRAL_URL = "https://commas.com";
+  document.getElementById('signup').href = REFERRAL_URL;
+  var fmt=function(n){return '$'+Math.round(n).toLocaleString('en-US');};
+  var $=function(id){return document.getElementById(id);};
+
+  // Fee calculator
+  function calc(){
+    var v=+$('vol').value, c=+$('cur').value, m=+$('com').value;
+    var fs=v*c/100, fc=v*m/100, save=Math.max(0,fs-fc);
+    $('volOut').textContent=fmt(v); $('curOut').textContent=c.toFixed(2)+'%'; $('comOut').textContent=m.toFixed(2)+'%';
+    $('feeS').textContent=fmt(fs); $('feeC').textContent=fmt(fc);
+    $('barC').style.width=(fs?fc/fs*100:0)+'%';
+    $('saveMo').textContent=fmt(save); $('saveYr').textContent=fmt(save*12);
+  }
+  ['vol','cur','com'].forEach(function(id){$(id).addEventListener('input',calc)}); calc();
+
+  // Referral calculator: 20% of net margin; net margin assumed ~2.8% of processed volume (same basis as Luis's partner page)
+  function ref(){
+    var n=+$('rn').value, v=+$('rv').value, mo=n*v*0.028*0.20;
+    $('rnOut').textContent=n; $('rvOut').textContent=fmt(v);
+    $('rMo').textContent=fmt(mo); $('rYr').textContent=fmt(mo*12);
+  }
+  ['rn','rv'].forEach(function(id){$(id).addEventListener('input',ref)}); ref();
+
+  // Tabs
+  var tabs=[].slice.call(document.querySelectorAll('[role=tab]'));
+  tabs.forEach(function(t){
+    t.addEventListener('click',function(){
+      tabs.forEach(function(o){var on=o===t; o.setAttribute('aria-selected',on); $(o.getAttribute('aria-controls')).hidden=!on;});
+    });
+  });
+
+  // Copy buttons
+  document.querySelectorAll('.copy').forEach(function(b){
+    b.addEventListener('click',function(){
+      var t=b.dataset.copy, done=function(){b.textContent='Copied'; setTimeout(function(){b.textContent='Copy'},1600);};
+      try{ navigator.clipboard.writeText(t).then(done,function(){b.textContent=t;}); }catch(e){ b.textContent=t; }
+    });
+  });
+})();
+</script>
+
+</body></html>
